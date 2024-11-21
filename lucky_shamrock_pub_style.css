@@ -28,6 +28,7 @@ flex-wrap:wrap;
 }
 .navigation_menu ul{
 text-align:center;
+list-style-image:url(Menu\ Arrow.png)
 
 }
 .navigation_menu li{
