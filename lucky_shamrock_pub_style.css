@@ -16,7 +16,7 @@ body{
 }
 .navigation_menu{
     display:flex;
-    background-color:brown;
+    background-color:rgb(77, 17, 17);
     border:2px solid;
     border-color:linear-gradient(55deg,gold,rgb(243, 181, 24),gold);
 }
@@ -50,7 +50,7 @@ list-style-image:url(Menu\ Arrow.png)
     width:100px;
     height:200px;
     position:absolute;
-    background-color:green;
+    background-color:rgb(109, 50, 30);
 }
 .dropdown-content{
     height:32.5%;
@@ -68,5 +68,5 @@ list-style-image:url(Menu\ Arrow.png)
     display:flex;
 }
 .dropdown-content:hover{
-    background-color:darkgreen;
+    background-color:rgb(178, 123, 52);
 }
