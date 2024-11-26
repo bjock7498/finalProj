@@ -26,6 +26,7 @@ flex:1 0 70%;
 .navigation_menu .other_side{/*container box for the right side of the navigation bar, where the sign-up, log-in, and (maybe) shopping cart icon will be*/
     flex-wrap:wrap;
     flex:0 1 30%;
+    text-align:right;
 }
 .navigation_menu ul{
 text-align:center;
@@ -76,4 +77,19 @@ list-style-image:url("Menu\ Arrow.png");
 }
 .dropdown-content:hover{
     background-color:rgb(178, 123, 52);
+}
+.navigation_menu a{
+    color:goldenrod;
+    padding: 1% 2%;
+    font-family:Celtica-Bold;
+    text-decoration:none;
+}
+.navigation_menu a:visited{
+    color:goldenrod;
+}
+.navigation_menu a:hover{
+    text-decoration:underline;
+}
+.navigation_menu a:active{
+    color:goldenrod;
 }
