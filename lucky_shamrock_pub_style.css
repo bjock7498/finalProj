@@ -14,19 +14,19 @@
 body{
     background-color:green;
 }
-.navigation_menu{
+.navigation_menu{/*greater container box for the navigation menu*/
     display:flex;
     background-color:rgb(77, 17, 17);
     border:2px solid;
     border-color:linear-gradient(55deg,gold,rgb(243, 181, 24),gold);
 }
-.navigation_menu .one_side{
+.navigation_menu .one_side{/*container box for the left side of the navigation menu, used for most of the nav bar*/
 flex:1 0 70%;
 display:flex;
 justify-content:space-around;
 flex-wrap:wrap;
 }
-.navigation_menu .other_side{
+.navigation_menu .other_side{/*container box for the right side of the navigation bar, where the sign-up, log-in, and (maybe) shopping cart icon will be*/
     flex-wrap:wrap;
     flex:0 1 30%;
 }
@@ -45,21 +45,21 @@ list-style-image:url(Menu\ Arrow.png)
     background-color:rgb(121, 31, 31);
     cursor:pointer;
 }
-.dropdown{
+.dropdown{/*the container for the dropdown*/
     display:none;
     width:100px;
     height:200px;
     position:absolute;
     background-color:rgb(109, 50, 30);
 }
-.dropdown-content{
+.dropdown-content{/*the individual sections of the dropdown (Food, Alcoholic Beverages, Non-Alcoholic Drinks)*/
     height:32.5%;
     border-top:2px solid gold;
     border-bottom:2px solid gold;
     font-family:Morris-Roman;
     color:gold;
 }
-.dropdown-content img{
+.dropdown-content img{/*put within "dropdown-content" at the very end. Use "Dropdown Arrow."*/
     float:right;
     width:10%;
     height:80%;
