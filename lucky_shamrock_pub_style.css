@@ -27,6 +27,7 @@ flex:1 0 70%;
     flex-wrap:wrap;
     flex:0 1 30%;
     text-align:right;
+    align-items:center;
 }
 .navigation_menu ul{
 text-align:center;
@@ -92,4 +93,30 @@ list-style-image:url("Menu\ Arrow.png");
 }
 .navigation_menu a:active{
     color:goldenrod;
+}
+.display{/*the main container for the display*/
+    border-top: 4px solid goldenrod;
+    border-bottom: 4px solid goldenrod;
+    height:400px;
+    background-color:rgba(255, 255, 255, 0.5);
+}
+.display .arrow-container{/*the main class for the container of the display arrows*/
+    margin:7% 0;
+    height:200px;
+    width:75px;
+    display:flex;
+    align-items:center;
+}
+.display .arrow-container.left{/*left variant for the arrow containers*/
+    float:left;
+}
+.display .arrow-container.right{/*right variant for the arrow containers*/
+    float:right;
+}
+.display .arrow-container:hover{
+    background-color:rgba(255, 255, 255, 0.7);
+}
+.display .arrow-container img{
+    height:80%;
+    width:80%;
 }
