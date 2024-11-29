@@ -120,3 +120,44 @@ list-style-image:url("Menu\ Arrow.png");
     height:80%;
     width:80%;
 }
+.log-in-area{/*the area that holds everything related to the log-in. Can be applied to a "body" or "div" container.*/
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.log-in-box{/*what serves as the "background" of sorts for the log-in. Creates a small box that contains all the basic log-in stuff*/
+    background-color:rgb(109,40,30);
+    align-items:center;
+    text-align:center;
+    border:3px solid goldenrod;
+    border-radius:10px;
+    width:400px;
+    height:275px;
+}
+.log-in-box h1{
+    color:goldenrod;
+    font-family:Celtica-Bold;
+    margin: 10px 0;
+}
+.log-in-box label{
+    color:goldenrod;
+    font-family:Morris-Roman;
+}
+.log-in-box input{
+    width:125px;
+    border:1px solid goldenrod;
+    border-radius:5px;
+    margin-bottom:15px;
+}
+.submit{/*the class for a submit button I created. May be reused for later things, such as the menu.*/
+    padding:5px 2px;
+    background-color:green;
+    border:2px solid goldenrod;
+    border-radius:5px;
+    font-family:Celtica-Bold;
+    color:goldenrod;
+}
+.submit:hover{
+    background-color:rgb(58, 141, 58);
+    cursor:pointer;
+}
