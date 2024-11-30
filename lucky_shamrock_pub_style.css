@@ -161,3 +161,31 @@ list-style-image:url("Menu\ Arrow.png");
     background-color:rgb(58, 141, 58);
     cursor:pointer;
 }
+.menu_item{/*the base slot for a menu item*/
+    border: 2px solid black;
+    border-radius:5px;
+    height:fit-content;
+    width:200px;
+    padding: 2px 3px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    background-color:white;
+}
+.menu_item div{/*edited to be used as containers for information in the menu slots.*/
+margin:2px 0;
+}
+.menu_item img{
+    height:150px;
+    width:150px;
+    border:1px solid black;
+}
+.menu_item h3{
+    font-family:Morris-Roman;
+    text-decoration:underline;
+}
+.menu_item .title{/*used as a modifier for the "title" part of a segment of the menu slot*/
+font-family:Morris-Roman;
+}
+
