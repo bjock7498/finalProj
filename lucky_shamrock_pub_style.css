@@ -4,52 +4,54 @@
     box-sizing:border-box;
 }
 @font-face{
-    font-family:"Celtica-Bold";
-    src:url(Celtica-Bold.ttf);
-}
-@font-face{
     font-family:"Morris-Roman";
     src:url(MorrisRomanBlack.otf);
 }
 body{
-    background-color:green;
+    background-color:rgb(12, 30, 12);
 }
 .navigation_menu{/*greater container box for the navigation menu*/
     display:flex;
-    background-color:rgb(77, 17, 17);
+    background-color:rgb(18, 49, 11);
     border:2px solid;
     border-color:goldenrod;
 }
 .navigation_menu .one_side{/*container box for the left side of the navigation menu, used for most of the nav bar*/
-flex:1 0 70%;
+flex:1 0 20%;
+align-items:center;
+}
+.navigation_menu .one_side img {
+    height:150px;
+    width:150px;
 }
 .navigation_menu .other_side{/*container box for the right side of the navigation bar, where the sign-up, log-in, and (maybe) shopping cart icon will be*/
     flex-wrap:wrap;
-    flex:0 1 30%;
+    flex:0 1 80%;
     text-align:right;
     align-items:center;
 }
 .navigation_menu ul{
 text-align:center;
-list-style-image:url("Menu\ Arrow.png");
+list-style-type:none;
 
 }
 .navigation_menu li{
-    font-family:Celtica-Bold;
+    font-family:Morris-Roman;
     padding:1% 3%;
     color:goldenrod;
     display:inline-block;
 }
 .navigation_menu li:hover{
-    background-color:rgb(121, 31, 31);
+    background-color:rgb(20, 75, 14);
     cursor:pointer;
+    text-decoration:underline;
 }
 .dropdown{/*the container for the dropdown*/
     display:none;
     width:200px;
     height:fit-content;
     position:absolute;
-    background-color:rgb(109, 50, 30);
+    background-color:rgb(18, 49, 11);
 }
 .dropdown-content{/*the individual sections of the dropdown (Food, Alcoholic Beverages, Non-Alcoholic Drinks)*/
     height:fit-content;
@@ -77,7 +79,7 @@ list-style-image:url("Menu\ Arrow.png");
     flex-direction:column;
 }
 .dropdown-content:hover{
-    background-color:rgb(178, 123, 52);
+    background-color:rgb(20, 75, 14);
 }
 .navigation_menu a{
     color:goldenrod;
@@ -115,10 +117,15 @@ list-style-image:url("Menu\ Arrow.png");
 }
 .display .arrow-container:hover{
     background-color:rgba(255, 255, 255, 0.7);
+    cursor:pointer;
 }
 .display .arrow-container img{
     height:80%;
     width:80%;
+    opacity:50%;
+}
+.display .arrow-container:hover img{
+    opacity:100%;
 }
 .log-in-area{/*the area that holds everything related to the log-in. Can be applied to a "body" or "div" container.*/
     display:flex;
@@ -154,7 +161,7 @@ list-style-image:url("Menu\ Arrow.png");
     background-color:green;
     border:2px solid goldenrod;
     border-radius:5px;
-    font-family:Celtica-Bold;
+    font-family:Morris-Roman;
     color:goldenrod;
 }
 .submit:hover{
