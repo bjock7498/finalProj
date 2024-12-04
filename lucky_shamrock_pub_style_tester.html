@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="lucky_shamrock_pub_style.css">
+    </head>
+    <body>
+        <div class="navigation_menu">
+            <div class="one_side">
+                <ul>
+                <li>Home</li>
+                <li>Menu
+                    <div class="dropdown">
+                        <div class="dropdown-content"><span class="text-area">Food</span><span class="image-area"><img src="Dropdown Arrow.png"></span></div>
+                        <div class="dropdown-content"><span class="text-area">Alcoholic Drinks</span><span class="image-area"><img src="Dropdown Arrow.png"></span></div>
+                        <div class="dropdown-content"><span class="text-area">Non-Alcoholic Drinks</span><span class="image-area"><img src="Dropdown Arrow.png"></span></div>
+                    </div>
+                </li>
+                <li>Order</li>
+                <li>Events</li>
+                <li>Charities</li>
+                <li>About Us</li>
+                </ul>
+            </div>
+            <div class="other_side">
+                <a href="#">Log-in</a>
+            </div>
+        </div>
+
+        <div class="display">
+            <div class="arrow-container left" onclick="plusSlides(-1)">
+                <img src="Display Arrow Left.png">
+            </div>
+            <div class="slides-container">
+                <div class="mySlides fade">
+                    <img src="Display_Page_1.png" alt="Slide 1" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="Display_Page_2.png" alt="Slide 2" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="Display_Page_3.png" alt="Slide 3" style="width:100%">
+                </div>
+            </div>
+            <div class="arrow-container right" onclick="plusSlides(1)">
+                <img src="Display Arrow Right.png">
+            </div>
+        </div>
+        
+        <div class="log-in-area">
+            <div class="log-in-box">
+                <h1>Sign-in</h1>
+                <div><label for="username">Username</label></div>
+                <input id="username">
+                <div><label for="password">Password</label></div>
+                <input id="password" type="password">
+                <div>
+                 <label for="customer">Customer</label><input type="checkbox" id="customer">
+                <label for="employee">Employee</label><input type="checkbox" id="employee">
+                </div>
+                <div><label for="manager">Manager</label><input type="checkbox" id="manager">   </div>
+                <div><button class="submit" onclick="signin()">Log-in</button></div>
+            </div>
+        </div>
+
+        <div class="menu_item">
+            <img src="shepherds-pie-menu-pic.jpg">
+            <h3>Shepherd's Pie</h3>
+            <div><span class="title">Description: </span>A delicious pie filled with mashed potatoes.</div>
+            <div><span class="title">Price: </span><span id="price-value"> $14.99</span></div>
+            <div><span class="title">Availability: </span><span id="availability-value" style="color:green;"> In stock.</span></div>
+            <button class="submit">Purchase</button>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
