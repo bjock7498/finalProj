@@ -27,19 +27,18 @@ align-items:center;
 .navigation_menu .other_side{/*container box for the right side of the navigation bar, where the sign-up, log-in, and (maybe) shopping cart icon will be*/
     flex-wrap:wrap;
     flex:0 1 80%;
-    text-align:right;
-    align-items:center;
 }
 .navigation_menu ul{
 text-align:center;
 list-style-type:none;
-
+margin-left:40%;
 }
 .navigation_menu li{
     font-family:Morris-Roman;
-    padding:1% 3%;
+    padding:8% 4%;
     color:goldenrod;
     display:inline-block;
+    font-size:150%;
 }
 .navigation_menu li:hover{
     background-color:rgb(20, 75, 14);
@@ -51,7 +50,7 @@ list-style-type:none;
     width:200px;
     height:fit-content;
     position:absolute;
-    background-color:rgb(18, 49, 11);
+    background-color:rgb(12, 35, 7);
 }
 .dropdown-content{/*the individual sections of the dropdown (Food, Alcoholic Beverages, Non-Alcoholic Drinks)*/
     height:fit-content;
@@ -65,6 +64,7 @@ list-style-type:none;
 .dropdown-content .text-area{/*stored with dropdown-content. Uses a span. Contains text.*/
     width:80%;
     flex-wrap:wrap;
+    font-size:75%;
 }
 .dropdown-content .image-area{/*within dropdown-content. Utilizes a span. Holds the image.*/
     width:20%;
@@ -79,7 +79,7 @@ list-style-type:none;
     flex-direction:column;
 }
 .dropdown-content:hover{
-    background-color:rgb(20, 75, 14);
+    background-color:rgb(15, 44, 12);
 }
 .navigation_menu a{
     color:goldenrod;
@@ -209,4 +209,79 @@ footer .icon{
     height:15px;
     width:15px;
 }
-
+.menu-box{/*basic container for the menu*/
+display:flex;
+justify-content:center;
+}
+.menu{
+    background-color:white;
+    display:flex;
+    justify-content:space-evenly;
+    width:80%;
+}
+.shopping-cart{
+    display:none;
+    width:250px;
+    height:fit-content;
+    position:absolute;
+    background-color:white;
+    border-top:1px solid lightgrey;
+    border-bottom:1px solid lightgray;
+    font-size:75%;
+    color:black;
+}
+.navigation_menu li:hover .shopping-cart{
+    display:flex;
+}
+.cart-area{
+    border-top:1px solid lightgray;
+    border-bottom:1px solid lightgrey;
+    width:100%;
+}
+.cart-item-title{
+    width:50%;
+    flex-wrap:wrap;
+    text-align:center;
+    font-family:Morris-Roman;
+    text-decoration:underline;
+}
+.cart-item-other{
+    width:25%;
+    flex-wrap:wrap;
+    text-align:center;
+    font-family:Morris-Roman;
+    text-decoration:underline;
+}
+.cart-item{
+    height:fit-content;
+    width:100%;
+    flex-wrap:wrap;
+}
+.cart-segment-image_area{
+    width:50%;
+    align-items:center;
+    flex-wrap:wrap;
+}
+.cart-segment-other{
+    width:25%;
+    align-items:center;
+    flex-wrap:wrap;
+}
+.cart-item img{
+    height:25px;
+    width:25px;
+}
+.shopping-cart_totalp-title{
+    font-family:Morris-Roman;
+    text-align:center;
+    width:80%;
+    flex-wrap:wrap;
+}
+.shopping-cart_total-price{
+    width:20%;
+    font-family:'Courier New', Courier, monospace;
+    flex-wrap:wrap;
+}
+.shopping-cart label{
+    font-family:Morris-Roman;
+}

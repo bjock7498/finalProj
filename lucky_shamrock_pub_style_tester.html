@@ -5,23 +5,37 @@
     <body>
         <div class="navigation_menu">
             <div class="one_side">
-                <ul>
-                <li>Home</li>
-                <li>Menu
-                    <div class="dropdown">
-                        <div class="dropdown-content"><span class="text-area">Food</span><span class="image-area"><img src="Dropdown Arrow.png"></span></div>
-                        <div class="dropdown-content"><span class="text-area">Alcoholic Drinks</span><span class="image-area"><img src="Dropdown Arrow.png"></span></div>
-                        <div class="dropdown-content"><span class="text-area">Non-Alcoholic Drinks</span><span class="image-area"><img src="Dropdown Arrow.png"></span></div>
-                    </div>
-                </li>
-                <li>Order</li>
-                <li>Events</li>
-                <li>Charities</li>
-                <li>About Us</li>
-                </ul>
+                <img src="The Lucky Shamrock Pub Logo.png">
             </div>
             <div class="other_side">
-                <a href="#">Log-in</a>
+                <ul>
+                    <li>Home</li>
+                    <li>Menu
+                        <div class="dropdown">
+                            <div class="dropdown-content"><span class="text-area">Food</span><span class="image-area"><img src="Dropdown Arrow.png"></span></div>
+                            <div class="dropdown-content"><span class="text-area">Alcoholic Drinks</span><span class="image-area"><img src="Dropdown Arrow.png"></span></div>
+                            <div class="dropdown-content"><span class="text-area">Non-Alcoholic Drinks</span><span class="image-area"><img src="Dropdown Arrow.png"></span></div>
+                        </div>
+                    </li>
+                    <li>About Us</li>
+                    <li>Log-in</li>
+                    <li><ion-icon name="cart-outline"></ion-icon>
+                    <div class="shopping-cart">
+                        <div class="cart-item-title">Item</div><div class="cart-item-other">Quantity</div><div class="cart-item-other">Price</div>
+                        <div class="cart-area">
+                            <div class="cart-item">
+                                <div class="cart-segment-image_area"><img src="shepherds-pie-menu-pic.jpg"></div>
+                                <div class="cart-segment-other"><input type="number" id="quantity"></div>
+                                <div class="cart-segment-other">$14.99</div>
+                            </div>  
+                        </div>
+                            <div><input type="checkbox" id="reserved"><label for="reserved">Reserve a Table?</label></div>
+                            <div class="shopping-cart_totalp-title">Total Price:</div>
+                            <div class="shopping-cart_total-price">$14.99</div>
+                            <div style="align-items:center;"><button class="submit">Purchase Meal</button></div>
+                    </div>    
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="display">
@@ -52,6 +66,8 @@
             <div><span class="title">Availability: </span><span id="availability-value" style="color:green;"> In stock.</span></div>
             <button class="submit">Purchase</button>
         </div>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
     </body>
     <footer>
         <p>Erin go Bragh!</p>
