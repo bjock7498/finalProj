@@ -219,9 +219,10 @@ justify-content:center;
     justify-content:space-evenly;
     width:80%;
 }
-.shopping-cart{
+/*I would recommend making heavy usage of the tester while trying to implement these features, as it will eliminate much of the confusion*/
+.shopping-cart{/*container for all items of the shopping cart*/
     display:none;
-    width:250px;
+    width:300px;
     height:fit-content;
     position:absolute;
     background-color:white;
@@ -229,59 +230,79 @@ justify-content:center;
     border-bottom:1px solid lightgray;
     font-size:75%;
     color:black;
+    transform:translateX(-250px)
 }
 .navigation_menu li:hover .shopping-cart{
     display:flex;
+    flex-direction:column;
 }
-.cart-area{
+.cart-area{/*This is the area that contains the actual objects being sold*/
+    display:flex;
     border-top:1px solid lightgray;
     border-bottom:1px solid lightgrey;
     width:100%;
 }
-.cart-item-title{
+.shopping-cart-top{/*This is used to fix up the titles*/
+    display:flex;
+    width:100%;
+}
+.cart-item-title{/*actually has no relation to the "cart-item" class. It is used for the "Item" title at the top.*/
     width:50%;
     flex-wrap:wrap;
     text-align:center;
     font-family:Morris-Roman;
     text-decoration:underline;
 }
-.cart-item-other{
+.cart-item-other{/*Once again, this actually has nothing to do with "cart-item." It is used for the "Quantity" and "Price" titles at the top.*/
     width:25%;
     flex-wrap:wrap;
     text-align:center;
     font-family:Morris-Roman;
     text-decoration:underline;
 }
-.cart-item{
+.cart-item{/*This is the container for the actual items*/
+    display:flex;
     height:fit-content;
     width:100%;
     flex-wrap:wrap;
 }
-.cart-segment-image_area{
+.cart-segment-image_area{/*The part of the item that displays the image*/
     width:50%;
     align-items:center;
     flex-wrap:wrap;
 }
-.cart-segment-other{
+.cart-segment-other{/*The two parts of the item that display quantity and price. You MUST create two of them, a single one does not handle both*/
+    display:flex;
     width:25%;
-    align-items:center;
+    justify-content:center;
     flex-wrap:wrap;
+    padding-top:5%;
 }
 .cart-item img{
-    height:25px;
-    width:25px;
+    height:50px;
+    width:50px;
 }
-.shopping-cart_totalp-title{
+.shopping-cart_totalp-title{/*This is used to help mold the "Total Price" title*/
     font-family:Morris-Roman;
-    text-align:center;
-    width:80%;
     flex-wrap:wrap;
+    float:left;
+    padding-left:25%;
+
 }
-.shopping-cart_total-price{
-    width:20%;
-    font-family:'Courier New', Courier, monospace;
+.shopping-cart_total-price{/*This is used to display the actual total price*/
+    font-family:'Times New Roman',Times,serif;
     flex-wrap:wrap;
+    float:right;
+    padding-right:25%;
 }
 .shopping-cart label{
     font-family:Morris-Roman;
 }
+#price{/*This is an actual id tag used to target the prices in the items*/
+    font-family:'Times New Roman',Times,serif;
+}
+.shopping-cart input{
+    width:30px;
+}
+
+
