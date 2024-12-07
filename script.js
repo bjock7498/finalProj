@@ -1,10 +1,3 @@
-var pngs = [
-"ale.png",
-"ale2.png",
-"ale3.png",
-"ale4.png"
-];
-
 let slideIndex = 1;
 showSlides(slideIndex);
 
