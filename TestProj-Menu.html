@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  
+  <script defer src="TestProj-Menu.js"></script>
+</head>
+<style>
+    .menu-container {
+        padding: 2rem;
+      }
+      
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+      
+      .menu-item {
+        text-align: center;
+        border: 1px solid var(--dark-green);
+        border-radius: 8px;
+        padding: 1rem;
+        background-color: var(--white);
+      }
+      
+      .menu-item-image {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      
+      .menu-item-name {
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+      }
+      
+      .menu-item-price {
+        font-size: 1rem;
+        color: var(--gold);
+        margin-bottom: 1rem;
+      }
+      
+      .add-to-cart {
+        background-color: var(--dark-green);
+        color: var(--white);
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+      }
+      
+      .add-to-cart:hover {
+        background-color: var(--gold);
+        color: var(--dark);
+      }
+      
+</style>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">The Lucky Shamrock </h1>
+      <nav class="navbar">
+        <a href="TestProj.html">Home</a>
+        <a href="#about">About</a>
+        <a href="TestProj-Menu.html">Menu</a>
+        <a href="#shop">Shop</a>
+        <a href="TestProj-Login.html">Login</a>
+        <a href="TestProj-cart.html" id="cart-link">Cart (<span id="cart-count">0</span>)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="menu-container">
+    <h2>Our Menu</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="images/fish_and_chips.jpg" alt="Fish and Chips" class="menu-item-image">
+        <h3 class="menu-item-name">Fish and Chips</h3>
+        <p class="menu-item-price">$14.99</p>
+        <button 
+          class="add-to-cart" 
+          data-item="Fish and Chips" 
+          data-price="14.99" 
+          data-image="images/fish_and_chips.jpg">
+          Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="images/shepherds_pie.jpg" alt="Shepherd's Pie" class="menu-item-image">
+        <h3 class="menu-item-name">Shepherd's Pie</h3>
+        <p class="menu-item-price">$12.99</p>
+        <button 
+          class="add-to-cart" 
+          data-item="Shepherd's Pie" 
+          data-price="12.99" 
+          data-image="images/shepherds_pie.jpg">
+          Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="images/irish_stew.jpg" alt="Irish Stew" class="menu-item-image">
+        <h3 class="menu-item-name">Irish Stew</h3>
+        <p class="menu-item-price">$13.99</p>
+        <button 
+          class="add-to-cart" 
+          data-item="Irish Stew" 
+          data-price="13.99" 
+          data-image="images/irish_stew.jpg">
+          Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="images/corned_beef.jpg" alt="Corned Beef Sandwich" class="menu-item-image">
+        <h3 class="menu-item-name">Corned Beef Sandwich</h3>
+        <p class="menu-item-price">$10.99</p>
+        <button 
+          class="add-to-cart" 
+          data-item="Corned Beef Sandwich" 
+          data-price="10.99" 
+          data-image="images/corned_beef.jpg">
+          Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="images/beef_burger.jpg" alt="Guinness Beef Burger" class="menu-item-image">
+        <h3 class="menu-item-name">Guinness Beef Burger</h3>
+        <p class="menu-item-price">$11.99</p>
+        <button 
+          class="add-to-cart" 
+          data-item="Guinness Beef Burger" 
+          data-price="11.99" 
+          data-image="images/beef_burger.jpg">
+          Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="images/bangers_mash.jpg" alt="Bangers and Mash" class="menu-item-image">
+        <h3 class="menu-item-name">Bangers and Mash</h3>
+        <p class="menu-item-price">$12.49</p>
+        <button 
+          class="add-to-cart" 
+          data-item="Bangers and Mash" 
+          data-price="12.49" 
+          data-image="images/bangers_mash.jpg">
+          Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="images/caesar_salad.jpg" alt="Mulligan's Caesar Salad" class="menu-item-image">
+        <h3 class="menu-item-name">Mulligan's Caesar Salad</h3>
+        <p class="menu-item-price">$9.99</p>
+        <button 
+          class="add-to-cart" 
+          data-item="Mulligan's Caesar Salad" 
+          data-price="9.99" 
+          data-image="images/caesar_salad.jpg">
+          Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="images/irish_breakfast.jpg" alt="Traditional Irish Breakfast" class="menu-item-image">
+        <h3 class="menu-item-name">Traditional Irish Breakfast</h3>
+        <p class="menu-item-price">$15.99</p>
+        <button 
+          class="add-to-cart" 
+          data-item="Traditional Irish Breakfast" 
+          data-price="15.99" 
+          data-image="images/irish_breakfast.jpg">
+          Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="images/guinness_pie.jpg" alt="Beef and Guinness Pie" class="menu-item-image">
+        <h3 class="menu-item-name">Beef and Guinness Pie</h3>
+        <p class="menu-item-price">$13.99</p>
+        <button 
+          class="add-to-cart" 
+          data-item="Beef and Guinness Pie" 
+          data-price="13.99" 
+          data-image="images/guinness_pie.jpg">
+          Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="images/chicken_tenders.jpg" alt="Chicken Tenders and Fries" class="menu-item-image">
+        <h3 class="menu-item-name">Chicken Tenders and Fries</h3>
+        <p class="menu-item-price">$9.99</p>
+        <button 
+          class="add-to-cart" 
+          data-item="Chicken Tenders and Fries" 
+          data-price="9.99" 
+          data-image="images/chicken_tenders.jpg">
+          Add to Cart
+        </button>
+      </div>
+      <!-- Repeat similar blocks for other menu items -->
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 The Lucky Shamrock. Erin go Bragh !</p>
+    </div>
+  </footer>
+</body>
+</html>
+
