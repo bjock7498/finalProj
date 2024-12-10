@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu</title>
-  
+  <script defer src="cart.js"></script>  
   <script defer src="TestProj-Menu.js"></script>
+  <script defer src="server.js"></script>
 </head>
 <style>
     :root {
@@ -125,7 +126,7 @@
         <a href="TestProj-Menu.html">Menu</a>
         <a href="#shop">Staff</a>
         <a href="TestProj-Login.html">Login</a>
-        <a href="TestProj-cart.html" id="cart-link">Cart (<span id="cart-count">0</span>)</a>
+        <a href="TestProj-cart.html" id="cart-link"x>Cart (<span id="cart-count">0</span>)</a>
       </nav>
     </div>
   </header>
@@ -318,7 +319,7 @@
                     <img src="Magners Irish Cider Logo.png" alt="Magners" class="menu-item-image">
                     <h3 class="menu-item-name">Magners</h3>
                     <p class="menu-item-price">$13.99</p>
-                    <button 
+                    <button
                       class="add-to-cart" 
                       data-item="Magners" 
                       data-price="13.99" 
@@ -384,4 +385,3 @@
   </footer>
 </body>
 </html>
-
