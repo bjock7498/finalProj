@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manager Login</title>
+  <link rel="stylesheet" href="TestProj-Manager-login.css">
+  <script defer src="TestProj-Login.js"></script>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="TestProj-Menu.html">Menu</a></li>
+      <li><a href="TestProj-cart.html">Cart</a></li>
+      <li><a href="TestProj-Manager-login.html" class="active">Manager Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Login Form -->
+  <div class="login-container">
+    <h1>Manager Login</h1>
+    <form id="login-form">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="email" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit" class="login-button">Login</button>
+      <p id="login-message" class="error-message"></p>
+    </form>
+  </div>
+
+</body>
+</html>
+

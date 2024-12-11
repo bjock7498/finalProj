@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="cart.js"></script>
+</head>
+<style>
+
+:root {
+    --dark-green: #004400;
+    --gold: #FFD700;
+    --white: #ffffff;
+    --dark: #2c2c2c;
+  }
+
+
+  body {
+    font-family:"Morris-Roman" ;
+    margin: 0;
+    padding: 0;
+    color: var(--dark);
+  }
+  
+  .header {
+    background-color: var(--dark-green);
+    color: var(--white);
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  .navbar a {
+    color: var(--gold);
+    margin: 0 1rem;
+    text-decoration: none;
+    
+
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+
+    .cart-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid var(--dark-green);
+  border-radius: 8px;
+  background-color: var(--white);
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--dark-green);
+  padding-bottom: 1rem;
+}
+
+.cart-item-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+
+.cart-item input {
+  width: 50px;
+  text-align: center;
+}
+
+.cart-summary {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-item-name {
+  font-weight: bold;
+}
+
+.cart-summary {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--dark-green);
+}
+
+.promo-code {
+  margin-top: 1rem;
+}
+
+.promo-code input {
+  width: 60%;
+  padding: 0.5rem;
+  margin-right: 1rem;
+}
+
+.promo-code button {
+  background-color: var(--gold);
+  color: var(--dark);
+}
+
+button {
+  background-color: var(--dark-green);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+button.remove-item {
+  background-color: red;
+  color: var(--white);
+}
+
+
+
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">The Lucky Shamrock</h1>
+      <nav class="navbar">
+        <a href="TestProj.html">Home</a>
+        <a href="#about">About</a>
+        <a href="TestProj-Menu.html">Menu</a>
+        <a href="TestProj-Manager-login.html">Staff</a>
+        <a href="TestProj-Login.html">Login</a>
+        <a href="TestProj-cart.html" id="cart-link">Cart (<span id="cart-count">0</span>)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="cart-container">
+    <h2>Your Shopping Cart</h2>
+    <div id="cart-items">
+      <p>Your cart is empty.</p>
+    </div>
+
+    <div id="cart-summary" class="cart-summary">
+      <h3>Cart Summary</h3>
+      <p>Subtotal: $<span id="cart-subtotal">0.00</span></p>
+      <p>Promo Discount: -$<span id="promo-discount">0.00</span></p>
+      <p><strong>Total: $<span id="cart-total">0.00</span></strong></p>
+
+      <div class="promo-code">
+        <input type="text" id="promo-code" placeholder="Enter Promo Code">
+        <button id="apply-promo">Apply</button>
+      </div>
+      <div>
+        <input type="checkbox" id="check">
+        <label for="checkbox">Make a Reservation?</label>
+      </div>
+
+      <button id="checkout-button" disabled>Proceed to Checkout</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 The Lucky Shmarock. Sláinte!</p>
+    </div>
+  </footer>
+  <script src="Testproj-cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mysql": "^2.18.1",
+    "sqlite3": "^5.1.7"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "finalproj-bryant",
+  "description": "",
+  "version": "1.0.0",
+  "main": "cart.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
