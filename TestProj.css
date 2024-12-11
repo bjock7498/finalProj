@@ -5,8 +5,16 @@
     --dark: #2c2c2c;
   }
   
+  
+  @font-face{
+    font-family:"Morris-Roman";
+    src:url(MorrisRomanBlack.otf);
+    }
+
+
+
   body {
-    font-family: Arial, sans-serif;
+    font-family:"Morris-Roman" ;
     margin: 0;
     padding: 0;
     color: var(--dark);
@@ -23,6 +31,8 @@
     color: var(--gold);
     margin: 0 1rem;
     text-decoration: none;
+    
+
   }
   
   .navbar a:hover {
@@ -88,4 +98,5 @@
     text-align: center;
     display: none;
   }
+  
   

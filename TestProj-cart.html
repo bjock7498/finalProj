@@ -5,9 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopping Cart</title>
   <link rel="stylesheet" href="styles.css">
-  <script defer src="cart.js"></script>
+  <script defer src="script.js"></script>
 </head>
 <style>
+
+:root {
+    --dark-green: #004400;
+    --gold: #FFD700;
+    --white: #ffffff;
+    --dark: #2c2c2c;
+  }
+
+
+  body {
+    font-family:"Morris-Roman" ;
+    margin: 0;
+    padding: 0;
+    color: var(--dark);
+  }
+  
+  .header {
+    background-color: var(--dark-green);
+    color: var(--white);
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  .navbar a {
+    color: var(--gold);
+    margin: 0 1rem;
+    text-decoration: none;
+    
+
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+
     .cart-container {
   max-width: 600px;
   margin: 2rem auto;
@@ -91,6 +126,8 @@ button.remove-item {
   color: var(--white);
 }
 
+
+
 </style>
 <!DOCTYPE html>
 <html lang="en">
@@ -99,7 +136,7 @@ button.remove-item {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopping Cart</title>
   <link rel="stylesheet" href="styles.css">
-  <script defer src="cart.js"></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header class="header">
@@ -109,7 +146,7 @@ button.remove-item {
         <a href="TestProj.html">Home</a>
         <a href="#about">About</a>
         <a href="TestProj-Menu.html">Menu</a>
-        <a href="#shop">Shop</a>
+        <a href="TestProj-Manager-login.html">Staff</a>
         <a href="TestProj-Login.html">Login</a>
         <a href="TestProj-cart.html" id="cart-link">Cart (<span id="cart-count">0</span>)</a>
       </nav>
@@ -133,7 +170,7 @@ button.remove-item {
         <button id="apply-promo">Apply</button>
       </div>
 
-      <button id="checkout-button">Proceed to Checkout</button>
+      <button id="checkout-button" disabled>Proceed to Checkout</button>
     </div>
   </main>
 
@@ -142,6 +179,7 @@ button.remove-item {
       <p>&copy; 2024 The Lucky Shmarock. Sláinte!</p>
     </div>
   </footer>
+  <script src="Testproj-cart.js"></script>
 </body>
 </html>
 

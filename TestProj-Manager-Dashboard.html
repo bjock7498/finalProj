@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manager Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+
+:root {
+    --dark-green: #004400;
+    --gold: #FFD700;
+    --white: #ffffff;
+    --dark: #2c2c2c;
+  }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    nav {
+      background-color:#004400;
+      color: #fff;
+      padding: 0.5rem 1rem;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .dashboard-container {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .dashboard-container h1 {
+      color: #333;
+    }
+
+    .dashboard-container ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .dashboard-container ul li {
+      margin: 1rem 0;
+    }
+
+    .dashboard-container ul li a {
+      text-decoration: none;
+      color: #007BFF;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .dashboard-container ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .logout-button {
+      background-color: #ff4d4d;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .logout-button:hover {
+      background-color: #e60000;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="TestProj.html">Home</a></li>
+      <li><a href="TestProj-Menu.html">Menu</a></li>
+      <li><a href="TestProj-cart.html">Cart</a></li>
+      <li><a href="TestProj-Manager-Dashboard.html">Dashboard</a></li>
+      <li><button id="logout-button" class="logout-button">Logout</button></li>
+    </ul>
+  </nav>
+  <div class="dashboard-container">
+    <h1>Welcome, Manager</h1>
+    <p>What would you like to do today?</p>
+    
+  </div>
+
+  <form id="addItem">
+    <input type="text" id="newItemName" placeholder="Item Name">
+    <input type="number" step="0.01" id="itemPrice" placeholder="Price">
+    <input type="text" id="imageUrl" placeholder="Image URL">
+    <input type="checkbox" id="isAlcoholic">
+    <label for="isAlcoholic">Alcoholic?</label>
+    <button type="submit">Add Item</button>
+</form>
+
+<form id="removeItem">
+    <input type="text" id="removeItemName" placeholder="Item Name">
+    <button type="submit">Remove Item</button>
+</form>
+<script src="init-db.js"></script>
+</body>
+  <script>
+    // Check login status
+    if (localStorage.getItem('managerLoggedIn') !== 'true') {
+      alert('Access denied. Please log in as a manager.');
+      window.location.href = 'TestProj-Manager-login.html';
+    }
+
+    // Handle logout
+    document.getElementById('logout-button').addEventListener('click', () => {
+      localStorage.removeItem('managerLoggedIn');
+      alert('You have been logged out.');
+      window.location.href = 'TestProj-Manager-login.html';
+    });
+  </script>
+</body>
+</html>

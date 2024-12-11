@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu</title>
-  <script defer src="cart.js"></script>  
+  
   <script defer src="TestProj-Menu.js"></script>
-  <script defer src="server.js"></script>
 </head>
 <style>
     :root {
@@ -124,9 +123,9 @@
         <a href="TestProj.html">Home</a>
         <a href="#about">About</a>
         <a href="TestProj-Menu.html">Menu</a>
-        <a href="#shop">Staff</a>
+        <a href="TestProj-Manager-login.html">Staff</a>
         <a href="TestProj-Login.html">Login</a>
-        <a href="TestProj-cart.html" id="cart-link"x>Cart (<span id="cart-count">0</span>)</a>
+        <a href="TestProj-cart.html" id="cart-link">Cart (<span id="cart-count">0</span>)</a>
       </nav>
     </div>
   </header>
@@ -141,8 +140,9 @@
         <button 
           class="add-to-cart" 
           data-item="Fish and Chips" 
-          data-price="14.99" 
-          data-image="Fish_and_chips_blackpool.jpg">
+          data-price="14.99"
+          data-image="Fish_and_chips_blackpool">
+          
           Add to Cart
         </button>
       </div>
@@ -153,8 +153,8 @@
         <button 
           class="add-to-cart" 
           data-item="Shepherd's Pie" 
-          data-price="12.99" 
-          data-image="shepherds-pie-menu-pic.jpg">
+          data-price="12.99" >
+         
           Add to Cart
         </button>
       </div>
@@ -165,8 +165,8 @@
         <button 
           class="add-to-cart" 
           data-item="Irish Stew" 
-          data-price="13.99" 
-          data-image="traditional-irish-stew.jpg">
+          data-price="13.99" >
+          
           Add to Cart
         </button>
       </div>
@@ -177,8 +177,8 @@
         <button 
           class="add-to-cart" 
           data-item="Potato Scones" 
-          data-price="10.99" 
-          data-image="potato-scones.jpg">
+          data-price="10.99" >
+        
           Add to Cart
         </button>
       </div>
@@ -189,8 +189,8 @@
         <button 
           class="add-to-cart" 
           data-item="Irish Champ" 
-          data-price="11.99" 
-          data-image="irish-champ.jpg">
+          data-price="11.99" >
+          
           Add to Cart
         </button>
       </div>
@@ -201,8 +201,8 @@
         <button 
           class="add-to-cart" 
           data-item="Apple Cake" 
-          data-price="12.49" 
-          data-image="apple-cake.jpg">
+          data-price="12.49" >
+         
           Add to Cart
         </button>
       </div>
@@ -214,7 +214,7 @@
           class="add-to-cart" 
           data-item="Cured Salmon" 
           data-price="9.99" 
-          data-image="cured-salmon.jpg">
+          >
           Add to Cart
         </button>
       </div>
@@ -226,7 +226,7 @@
           class="add-to-cart" 
           data-item="Bannok" 
           data-price="15.99" 
-          data-image="bannock.jpg">
+          >
           Add to Cart
         </button>
       </div>
@@ -238,7 +238,7 @@
           class="add-to-cart" 
           data-item="Beef and Guinness Pie" 
           data-price="13.99" 
-          data-image="images/guinness_pie.jpg">
+          >
           Add to Cart
         </button>
       </div>
@@ -250,7 +250,7 @@
           class="add-to-cart" 
           data-item="Guiness Pie" 
           data-price="9.99" 
-          data-image="guinness-pie.jpg">
+          >
           Add to Cart
         </button>
       </div>
@@ -262,7 +262,7 @@
     class="add-to-cart" 
     data-item="Celtic Rose" 
     data-price="13.99" 
-    data-image="celtic-rose.jpeg">
+    >
     Add to Cart
   </button>
   </div>
@@ -274,7 +274,7 @@
       class="add-to-cart" 
       data-item="Guiness" 
       data-price="13.99" 
-      data-image="guinness.png">
+      >
       Add to Cart
     </button>
     </div>
@@ -286,7 +286,7 @@
           class="add-to-cart" 
           data-item="Murphy's" 
           data-price="13.99" 
-          data-image="murphys.png">
+          >
           Add to Cart
         </button>
         </div>
@@ -298,7 +298,7 @@
               class="add-to-cart" 
               data-item="Tullermore Dew" 
               data-price="13.99" 
-              data-image="tullamore-dew.png">
+              >
               Add to Cart
             </button>
             </div>
@@ -311,7 +311,7 @@
                   class="add-to-cart" 
                   data-item="Jameson" 
                   data-price="13.99" 
-                  data-image="Jameson.png">
+                  >
                   Add to Cart
                 </button>
                 </div>
@@ -319,11 +319,11 @@
                     <img src="Magners Irish Cider Logo.png" alt="Magners" class="menu-item-image">
                     <h3 class="menu-item-name">Magners</h3>
                     <p class="menu-item-price">$13.99</p>
-                    <button
+                    <button 
                       class="add-to-cart" 
                       data-item="Magners" 
                       data-price="13.99" 
-                      data-image="Jameson.png">
+                      >
                       Add to Cart
                     </button>
                     </div>     
@@ -335,7 +335,7 @@
                           class="add-to-cart" 
                           data-item="Root Beer" 
                           data-price="13.99" 
-                          data-image="root-beer.png">
+                          >
                           Add to Cart
                         </button>
                         </div>                    
@@ -347,7 +347,7 @@
                               class="add-to-cart" 
                               data-item="Pepsi" 
                               data-price="13.99" 
-                              data-image="pepsi.png">
+                             >
                               Add to Cart
                             </button>
                             </div> 
@@ -359,11 +359,11 @@
                                   class="add-to-cart" 
                                   data-item="Sprite" 
                                   data-price="13.99" 
-                                  data-image="sprite.png">
+                                  >
                                   Add to Cart
                                 </button>
                                 </div>     
-                     <div class="menu-item">
+                  <div class="menu-item">
                                     <img src="fanta.png" alt="Fanta" class="menu-item-image">
                                     <h3 class="menu-item-name">Fanta</h3>
                                     <p class="menu-item-price">$13.99</p>
@@ -371,10 +371,12 @@
                                       class="add-to-cart" 
                                       data-item="Fanta" 
                                       data-price="13.99" 
-                                      data-image="fanta.png">
+                                      >
                                       Add to Cart
                                     </button>
-                                    </div>                                            
+ 
+ </div>
+    </div>
 </div>
   </main>
 
@@ -383,5 +385,7 @@
       <p>&copy; 2024 The Lucky Shamrock. Erin go Bragh !</p>
     </div>
   </footer>
+  <script src="TestProj-Menu.js"></script>
 </body>
 </html>
+

@@ -1,82 +1,65 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Manager Login Credentials
-  const managerCredentials = {
-    username: "manager",
-    password: "password123"
-  };
+function toggleForm(formType) {
+  const loginForm = document.getElementById('loginForm');
+  const signupForm = document.getElementById('signupForm');
+  const loginBtn = document.getElementById('loginBtn');
+  const signupBtn = document.getElementById('signupBtn');
 
-  // Login Form Logic
+  if (formType === 'login') {
+    loginForm.classList.remove('hidden');
+    signupForm.classList.add('hidden');
+    loginBtn.classList.add('active');
+    signupBtn.classList.remove('active');
+  } else {
+    signupForm.classList.remove('hidden');
+    loginForm.classList.add('hidden');
+    signupBtn.classList.add('active');
+    loginBtn.classList.remove('active');
+  }
+}
+document.addEventListener('DOMContentLoaded', () => {
   const loginForm = document.getElementById('login-form');
+  const loginErrorElement = document.getElementById('loginErrorElement');
+  
   if (loginForm) {
-    const loginMessage = document.getElementById('login-message');
     loginForm.addEventListener('submit', (event) => {
       event.preventDefault();
-      const username = document.getElementById('username').value.trim();
+
+      const username = document.getElementById('email').value.trim();
       const password = document.getElementById('password').value.trim();
 
-      if (username === managerCredentials.username && password === managerCredentials.password) {
-        localStorage.setItem('managerLoggedIn', 'true');
-        loginMessage.style.color = "green";
-        loginMessage.textContent = "Login successful!";
-        setTimeout(() => {
-          window.location.href = "manager-dashboard.html";
-        }, 1000);
+      const credentials = [
+        { username: "customer@email.com", password: "1234", role: "customer", redirectUrl: "TestProj-cart.html" },
+        { username: "manager@shamrock.com", password: "1234!", role: "admin", redirectUrl: "TestProj-Manager-Dashboard.html" }
+      ];
+
+      const user = credentials.find(
+        (cred) => cred.username === username && cred.password === password
+      );
+
+      if (user) {
+        alert(`Welcome, ${capitalizeFirstLetter(user.role)}!`);
+        window.location.href = "TestProj-cart.html";
+        localStorage.setItem('loggedInUser', user.role);
+
+        if (user.redirectUrl) {
+          window.location.href = user.redirectUrl;
+        }
+        if (user.role === "admin") {
+          window.location.href = user.redirectUrl;
+        }
       } else {
-        loginMessage.style.color = "red";
-        loginMessage.textContent = "Invalid username or password.";
+        displayLoginError();
       }
     });
   }
 
-  // Dashboard Access Check
-  if (document.body.classList.contains('dashboard')) {
-    if (localStorage.getItem('managerLoggedIn') !== 'true') {
-      alert('Access denied. Please log in as a manager.');
-      window.location.href = 'manager-login.html';
+  function displayLoginError() {
+    if (loginErrorElement) {
+      loginErrorElement.style.display = "block";
     }
   }
 
-  // Logout Button Logic
-  const logoutButton = document.getElementById('logout-button');
-  if (logoutButton) {
-    logoutButton.addEventListener('click', () => {
-      localStorage.removeItem('managerLoggedIn');
-      alert('You have been logged out.');
-      window.location.href = 'manager-login.html';
-    });
-  }
-});
-
-// Inside script.js
-const loginForm = document.getElementById('login-form');
-if (loginForm) {
-  loginForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const username = document.getElementById('username').value.trim();
-    const password = document.getElementById('password').value.trim();
-
-    // Validate credentials
-    if (username === managerCredentials.username && password === managerCredentials.password) {
-      localStorage.setItem('managerLoggedIn', 'true'); // Save login status
-      const loginMessage = document.getElementById('login-message');
-      loginMessage.style.color = "green";
-      loginMessage.textContent = "Login successful!";
-      setTimeout(() => {
-        window.location.href = "manager-dashboard.html"; // Redirect to dashboard
-      }, 1000); // Delay for better user experience
-    } else {
-      const loginMessage = document.getElementById('login-message');
-      loginMessage.style.color = "red";
-      loginMessage.textContent = "Invalid username or password.";
-    }
-  });
-}
-
-// Control visibility of Dashboard link
-document.addEventListener('DOMContentLoaded', () => {
-  const dashboardLink = document.getElementById('dashboard-link');
-  if (localStorage.getItem('managerLoggedIn') === 'true') {
-    dashboardLink.style.display = "block"; // Show dashboard link
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
   }
 });
