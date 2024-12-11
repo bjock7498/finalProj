@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Lucky Shamrock</title>
+  <link rel="stylesheet" href="TestProj.css">
+  <script defer src="TestProj.js"></script>
+  <script defer src="cart.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">The Lucky Shamrock</h1>
+      <nav class="navbar">
+        <a href="TestProj.html">Home</a>
+        <a href="#about">About</a>
+        <a href="TestProj-Menu.html">Menu</a>
+        <a href="#shop">Shop</a>
+        <a href="TestProj-Login.html">Login</a>
+        <a href="TestProj-cart.html" id="cart-link">Cart (<span id="cart-count">0</span>)</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="scrolling-display">
+    <div class="scrolling-content">
+      <p>Welcome to Pub Name! 🍀 Enjoy the best Irish drinks and food in town.</p>
+      <p>Live Music Every Weekend!</p>
+      <p>Special discounts on craft beers. Cheers! 🍻</p>
+    </div>
+  </div>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>Discover the charm of a classic Irish pub with modern touches. We serve traditional Irish meals, premium drinks, and offer a welcoming atmosphere.</p>
+    </div>
+  </section>
+
+  <section id="menu" class="section">
+    <div class="container">
+      <h2>Our Menu</h2>
+      <p>From Irish stews to local craft beers, there's something for everyone.</p>
+    </div>
+  </section>
+
+  <section id="shop" class="section">
+    <div class="container">
+      <h2>Shop</h2>
+      <div class="shop-items">
+        <div class="shop-item">
+          <h3>Pub T-Shirt</h3>
+          <p>$25</p>
+          <button class="add-to-cart" data-item="Pub T-Shirt" data-price="25">Add to Cart</button>
+        </div>
+        <div class="shop-item">
+          <h3>Beer Mug</h3>
+          <p>$15</p>
+          <button class="add-to-cart" data-item="Beer Mug" data-price="15">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Pub Name. Sláinte!</p>
+    </div>
+  </footer>
+</body>
+</html>

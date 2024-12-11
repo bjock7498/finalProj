@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <script defer src="cart.js"></script>  
+  <script defer src="TestProj-Menu.js"></script>
+</head>
+<style>
+    :root {
+    --dark-green: #004400;
+    --gold: #FFD700;
+    --white: #ffffff;
+    --dark: #2c2c2c;
+  }
+
+  
+    @font-face{
+    font-family:"Morris-Roman";
+    src:url(MorrisRomanBlack.otf);
+    }
+
+ 
+  
+    body {
+    font-family:"Morris-Roman";
+    margin: 0;
+    padding: 0;
+    color: var(--dark);
+  }
+  
+  .header {
+    background-color: var(--dark-green);
+    color: var(--white);
+    padding: 1rem 0;
+    text-align: center;
+    
+  }
+  
+  .navbar a {
+    color: var(--gold);
+    margin: 0 1rem;
+    text-decoration: none;
+   
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+
+
+    .menu-container {
+        padding: 2rem;
+      }
+      
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        
+      }
+      
+      .menu-item {
+        text-align: center;
+        border: 1px solid var(--dark-green);
+        border-radius: 8px;
+        padding: 1rem;
+        background-color: var(--white);
+      
+      }
+      
+      .menu-item-image {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      
+      .menu-item-name {
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+      
+      }
+      
+      .menu-item-price {
+        font-size: 1rem;
+        color: var(--gold);
+        margin-bottom: 1rem;
+      
+      }
+      
+      .add-to-cart {
+        background-color: var(--dark-green);
+        color: var(--white);
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+      }
+      
+      .add-to-cart:hover {
+        background-color: var(--gold);
+        color: var(--dark);
+      }
+      
+      
+      footer {
+    background-color: var(--dark-green);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+
+</style>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">The Lucky Shamrock </h1>
+      <nav class="navbar">
+        <a href="TestProj.html">Home</a>
+        <a href="#about">About</a>
+        <a href="TestProj-Menu.html">Menu</a>
+        <a href="#shop">Staff</a>
+        <a href="TestProj-Login.html">Login</a>
+        <a href="TestProj-cart.html" id="cart-link"x>Cart (<span id="cart-count">0</span>)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="menu-container">
+    <h2>Our Menu</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="Fish_and_chips_blackpool.jpg" alt="Fish and Chips" class="menu-item-image">
+        <h3 class="menu-item-name">Fish and Chips</h3>
+        <p class="menu-item-price">$14.99</p>
+        <button 
+          class="add-to-cart" 
+          data-item="Fish and Chips" 
+          data-price="14.99" 
+          data-image="Fish_and_chips_blackpool.jpg">
+          Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="shepherds-pie-menu-pic.jpg" alt="Shepherd's Pie" class="menu-item-image">
+        <h3 class="menu-item-name">Shepherd's Pie</h3>
+        <p class="menu-item-price">$12.99</p>
+        <button 
+          class="add-to-cart" 
+          data-item="Shepherd's Pie" 
+          data-price="12.99" 
+          data-image="shepherds-pie-menu-pic.jpg">
+          Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="traditional-irish-stew.jpg" alt="Irish Stew" class="menu-item-image">
+        <h3 class="menu-item-name">Irish Stew</h3>
+        <p class="menu-item-price">$13.99</p>
+        <button 
+          class="add-to-cart" 
+          data-item="Irish Stew" 
+          data-price="13.99" 
+          data-image="traditional-irish-stew.jpg">
+          Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="potato-scones.jpg" alt="Potato Scones" class="menu-item-image">
+        <h3 class="menu-item-name">Potato Scones</h3>
+        <p class="menu-item-price">$7.99</p>
+        <button 
+          class="add-to-cart" 
+          data-item="Potato Scones" 
+          data-price="10.99" 
+          data-image="potato-scones.jpg">
+          Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="irish-champ.jpg" alt="Irish Champ" class="menu-item-image">
+        <h3 class="menu-item-name">Irish Champ</h3>
+        <p class="menu-item-price">$6.99</p>
+        <button 
+          class="add-to-cart" 
+          data-item="Irish Champ" 
+          data-price="11.99" 
+          data-image="irish-champ.jpg">
+          Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="apple-cake.jpg" alt="Apple Cake" class="menu-item-image">
+        <h3 class="menu-item-name">Apple Cake</h3>
+        <p class="menu-item-price">$5.49</p>
+        <button 
+          class="add-to-cart" 
+          data-item="Apple Cake" 
+          data-price="12.49" 
+          data-image="apple-cake.jpg">
+          Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="cured-salmon.jpg" alt="Cured Salmon" class="menu-item-image">
+        <h3 class="menu-item-name">Cured Salmon</h3>
+        <p class="menu-item-price">$9.99</p>
+        <button 
+          class="add-to-cart" 
+          data-item="Cured Salmon" 
+          data-price="9.99" 
+          data-image="cured-salmon.jpg">
+          Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="bannock.jpg" alt="Bannok" class="menu-item-image">
+        <h3 class="menu-item-name">Bannok</h3>
+        <p class="menu-item-price">$5.99</p>
+        <button 
+          class="add-to-cart" 
+          data-item="Bannok" 
+          data-price="15.99" 
+          data-image="bannock.jpg">
+          Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="colcannon.jpg" alt="Colcannon" class="menu-item-image">
+        <h3 class="menu-item-name">Colecannon</h3>
+        <p class="menu-item-price">$6.99</p>
+        <button 
+          class="add-to-cart" 
+          data-item="Beef and Guinness Pie" 
+          data-price="13.99" 
+          data-image="images/guinness_pie.jpg">
+          Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="guinness-pie.jpg" alt="Guinness Pie" class="menu-item-image">
+        <h3 class="menu-item-name">Guinness Pie</h3>
+        <p class="menu-item-price">$9.99</p>
+        <button 
+          class="add-to-cart" 
+          data-item="Guiness Pie" 
+          data-price="9.99" 
+          data-image="guinness-pie.jpg">
+          Add to Cart
+        </button>
+      </div>
+<div class="menu-item">
+  <img src="celtic-rose.jpeg" alt="Celtic Rose" class="menu-item-image">
+  <h3 class="menu-item-name">Celtic Rose</h3>
+  <p class="menu-item-price">$13.99</p>
+  <button 
+    class="add-to-cart" 
+    data-item="Celtic Rose" 
+    data-price="13.99" 
+    data-image="celtic-rose.jpeg">
+    Add to Cart
+  </button>
+  </div>
+ <div class="menu-item">
+    <img src="guinness.png" alt="Guinness" class="menu-item-image">
+    <h3 class="menu-item-name">Guinness</h3>
+    <p class="menu-item-price">$13.99</p>
+    <button 
+      class="add-to-cart" 
+      data-item="Guiness" 
+      data-price="13.99" 
+      data-image="guinness.png">
+      Add to Cart
+    </button>
+    </div>
+    <div class="menu-item">
+        <img src="murphys.png" alt="Murphy's" class="menu-item-image">
+        <h3 class="menu-item-name">Murphy's</h3>
+        <p class="menu-item-price">$13.99</p>
+        <button 
+          class="add-to-cart" 
+          data-item="Murphy's" 
+          data-price="13.99" 
+          data-image="murphys.png">
+          Add to Cart
+        </button>
+        </div>
+    <div class="menu-item">
+            <img src="tullamore-dew.png" alt="Tullamore Dew" class="menu-item-image">
+            <h3 class="menu-item-name">Tullamore Dew</h3>
+            <p class="menu-item-price">$13.99</p>
+            <button 
+              class="add-to-cart" 
+              data-item="Tullermore Dew" 
+              data-price="13.99" 
+              data-image="tullamore-dew.png">
+              Add to Cart
+            </button>
+            </div>
+
+    <div class="menu-item">
+                <img src="Jameson.png" alt="Jameson" class="menu-item-image">
+                <h3 class="menu-item-name">Jameson</h3>
+                <p class="menu-item-price">$13.99</p>
+                <button 
+                  class="add-to-cart" 
+                  data-item="Jameson" 
+                  data-price="13.99" 
+                  data-image="Jameson.png">
+                  Add to Cart
+                </button>
+                </div>
+    <div class="menu-item">
+                    <img src="Magners Irish Cider Logo.png" alt="Magners" class="menu-item-image">
+                    <h3 class="menu-item-name">Magners</h3>
+                    <p class="menu-item-price">$13.99</p>
+                    <button
+                      class="add-to-cart" 
+                      data-item="Magners" 
+                      data-price="13.99" 
+                      data-image="Jameson.png">
+                      Add to Cart
+                    </button>
+                    </div>     
+     <div class="menu-item">
+                        <img src="root-beer.png" alt="Root Beer" class="menu-item-image">
+                        <h3 class="menu-item-name">Root Beer</h3>
+                        <p class="menu-item-price">$13.99</p>
+                        <button 
+                          class="add-to-cart" 
+                          data-item="Root Beer" 
+                          data-price="13.99" 
+                          data-image="root-beer.png">
+                          Add to Cart
+                        </button>
+                        </div>                    
+        <div class="menu-item">
+                            <img src="pepsi.png" alt="Pepsi" class="menu-item-image">
+                            <h3 class="menu-item-name">Pepsi</h3>
+                            <p class="menu-item-price">$13.99</p>
+                            <button 
+                              class="add-to-cart" 
+                              data-item="Pepsi" 
+                              data-price="13.99" 
+                              data-image="pepsi.png">
+                              Add to Cart
+                            </button>
+                            </div> 
+            <div class="menu-item">
+                                <img src="sprite.png" alt="Sprite" class="menu-item-image">
+                                <h3 class="menu-item-name">Sprite</h3>
+                                <p class="menu-item-price">$13.99</p>
+                                <button 
+                                  class="add-to-cart" 
+                                  data-item="Sprite" 
+                                  data-price="13.99" 
+                                  data-image="sprite.png">
+                                  Add to Cart
+                                </button>
+                                </div>     
+                     <div class="menu-item">
+                                    <img src="fanta.png" alt="Fanta" class="menu-item-image">
+                                    <h3 class="menu-item-name">Fanta</h3>
+                                    <p class="menu-item-price">$13.99</p>
+                                    <button 
+                                      class="add-to-cart" 
+                                      data-item="Fanta" 
+                                      data-price="13.99" 
+                                      data-image="fanta.png">
+                                      Add to Cart
+                                    </button>
+                                    </div>                                            
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 The Lucky Shamrock. Erin go Bragh !</p>
+    </div>
+  </footer>
+</body>
+</html>
