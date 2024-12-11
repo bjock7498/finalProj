@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+</head>
+<body>
+    
+    <form id="addItem">
+        <input type="text" id="newItemName" placeholder="Item Name">
+        <input type="number" step="0.01" id="itemPrice" placeholder="Price">
+        <input type="text" id="imageUrl" placeholder="Image URL">
+        <input type="checkbox" id="isAlcoholic">
+        <label for="isAlcoholic">Alcoholic?</label>
+        <button type="submit">Add Item</button>
+    </form>
+    
+    <form id="removeItem">
+        <input type="text" id="removeItemName" placeholder="Item Name">
+        <button type="submit">Remove Item</button>
+    </form>
+    <script src="init-db.js"></script>
+</body>
